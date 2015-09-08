@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditStudent.aspx.cs" Inherits="BootStrapTester.EditStudent" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditStudent.aspx.cs" Inherits="BootStrapTester.EditStudent" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,26 +28,24 @@
     <h1>Edit Consumer Information <small> Select category to search</small></h1>
 </div>
 
-<div class="container">
-    <div class="row">
-            <div class="col-lg-6">
+<div class="container formcontainer">
 
-                <%-- Name Labels Field --%>
-                <div class="form-group">                    
+                <%-- FName Field --%>
+                <div class="form-group">
+                    <asp:Label id="lblSearchFName" Text="First Name" Font-Bold="true" runat="server"></asp:Label>
                     <div class="input-group">
+                        <span class="input-group-addon icon" id="basic-addon1"></span>
                             <!-- First Name -->
-                        <asp:Label id="lblSearchFName" Text="First Name *" Font-Bold="true" runat="server"></asp:Label>
-                            <!-- Last Name -->
-                        <asp:Label id="lblSearchLName" Text="Last Name *" Font-Bold="true" runat="server"></asp:Label>
+                        <asp:TextBox class="form-control" ID="txtSearchFName" Placeholder="First Name" runat="server"></asp:TextBox>
                         <br />
                     </div>
                 </div>
 
-                <%-- Name  Field --%>
-                <div class="form-group">                    
+                    <%-- LName Field --%>
+                <div class="form-group">
+                    <asp:Label id="lblSearchLName" Text="Last Name" Font-Bold="true" runat="server"></asp:Label>
                     <div class="input-group">
-                            <!-- First Name -->
-                        <asp:TextBox class="form-control" ID="txtSearchFName" Placeholder="First Name" runat="server"></asp:TextBox>
+                        <span class="input-group-addon icon" id="basic-addon1"></span>
                             <!-- Last Name -->
                         <asp:TextBox class="form-control inline-control" ID="txtSearchLName" Placeholder="Last Name" runat="server"></asp:TextBox>
                         <br />
@@ -56,14 +54,15 @@
 
                 <%-- TuID Field --%>
                 <div class="form-group">
-                    <asp:Label id="lblSearchTUID" Text="TUID *" Font-Bold="true" runat="server"></asp:Label>
+                    <asp:Label id="lblSearchTUID" Text="TUID" Font-Bold="true" runat="server"></asp:Label>
                     <div class="input-group">
+                        <span class="input-group-addon icon" id="basic-addon1"></span>
                         <asp:TextBox class="form-control" ID="txtSearchTUID" Placeholder="TUID" runat="server"></asp:TextBox>
                         <br />
                     </div>
                 </div>
 
-          <br />
+
 
           <div class="input-group-btn">
             <asp:Button id="btnFindStudent" Text="Search" class="btn btn-colorbutton pull-right" runat="server" OnClick="btnFindStudent_Click"/>
@@ -111,8 +110,6 @@
     </p>
   
         
-    </div>
-        </div>
     </div>
 </div>
       </form>
